@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Anii! Grow To Know — Interactive Farming &amp; Educational Game (Hackathon Build). Art Direction &amp; Project Hustler by Olivia Gale using Blender, Unity Engine, Adobe Photoshop, and Procreate.">
+  <title>Anii! Grow To Know | Case Study — Olivia Gale</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script>
+    (function () {
+      var saved = localStorage.getItem("portfolio-theme");
+      if (saved === "light") {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+</head>
+<body class="case-study-page">
+  <div class="header-gradient" aria-hidden="true"></div>
+
+  <!-- Left Vertical Page Decorator -->
+  <div class="page-decorator blend-mode--difference" aria-hidden="true">
+    <div class="scroll-icon-indicator">
+      <div class="scroll-icon-mouse"></div>
+      <div class="scroll-arrow-line"></div>
+    </div>
+    <div class="scroll-indicator-label" id="page-decorator-label">ANII! GROW TO KNOW // CASE STUDY</div>
+  </div>
+
+  <!-- Right Vertical Scroll Marker Rail -->
+  <nav class="scroll-marker-block blend-mode--difference" id="scroll-marker-block" aria-label="Section scroll markers"></nav>
+
+  <!-- Fixed Minimal Top Navigation Bar -->
+  <header class="nav-bar" role="banner">
+    <div class="nav-bar-container">
+      <div class="menu-fader" aria-hidden="true"></div>
+
+      <a href="../index.html" class="brand-link" aria-label="Olivia Gale Home">
+        <span class="brand-mark">OG</span>
+        <span class="brand-wordmark">OLIVIA GALE</span>
+      </a>
+
+      <div class="nav-right-controls">
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light or dark theme" title="Toggle theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <button id="menu-toggle" class="nav-menu-button" type="button" aria-expanded="false" aria-controls="nav-drawer" aria-label="Toggle navigation menu">
+          <span class="preamble label-menu">MENU</span>
+          <span class="menu-icon-bars" aria-hidden="true">
+            <span class="menu-bar-line top"></span>
+            <span class="menu-bar-line bottom"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Right Slide-Out Navigation Drawer -->
+  <div id="nav-drawer" class="nav-drawer" aria-hidden="true">
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    <nav class="menu-bar" aria-label="Primary Navigation">
+      <div class="menu-bg-artwork" aria-hidden="true"></div>
+      <div class="menu-container">
+        <ul class="navigation-list">
+          <li class="nav-list-item"><a href="../index.html#hero" class="main-nav-link drawer-jump">Home</a></li>
+          <li class="nav-list-item"><a href="../index.html#projects" class="main-nav-link drawer-jump">Projects</a></li>
+          <li class="nav-list-item"><a href="../index.html#services" class="main-nav-link drawer-jump">Services</a></li>
+          <li class="nav-list-item"><a href="../about.html" class="main-nav-link drawer-jump">About Me</a></li>
+          <li class="nav-list-item"><a href="../index.html#contact" class="main-nav-link drawer-jump">Contact</a></li>
+        </ul>
+
+        <div class="nav-socmed">
+          <div class="preamble nav-menu-socmed">Connect with me</div>
+          <div class="socmed-group on-menu">
+            <a href="https://github.com/owleaveyah" target="_blank" rel="noopener noreferrer" class="nav-socmed-link" aria-label="GitHub">GitHub</a>
+            <a href="https://www.linkedin.com/in/olivia-gale-gerochi-4aab9029a/" target="_blank" rel="noopener noreferrer" class="nav-socmed-link" aria-label="LinkedIn">LinkedIn</a>
+            <a href="https://www.instagram.com/livie.gale/" target="_blank" rel="noopener noreferrer" class="nav-socmed-link" aria-label="Instagram">Instagram</a>
+            <a href="https://www.artstation.com/gnocchi_gerochi6" target="_blank" rel="noopener noreferrer" class="nav-socmed-link" aria-label="ArtStation">ArtStation</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+    <!-- =====================================================================
+         CASE STUDY HERO FOLD
+         ===================================================================== -->
+    <section anchor-name="Anii! Grow To Know" class="project--panel showcase-hero">
+      <img src="../images/anii-showcase.jpg" alt="Anii! Grow To Know stylized cozy farming game environment in Unity" class="project-hero-img">
+      <div class="project-hero-fader" aria-hidden="true"></div>
+    </section>
+
+    <!-- =====================================================================
+         PROJECT OVERVIEW & SPECS GRID
+         ===================================================================== -->
+    <section anchor-name="Overview" class="case-overview">
+      <div class="case-shell">
+        <div class="preamble decorated">PROJECT 02 &bull; INTERACTIVE FARMING &amp; EDUCATIONAL GAME (HACKATHON BUILD)</div>
+        <h1 class="base-heading case-title">Anii! Grow To Know</h1>
+
+        <div class="showcase-details">
+          <div class="showcase-detail-group">
+            <div class="showcase-detail-block">
+              <div class="preamble">Role</div>
+              <p class="showcase-detail-val">Art Director &amp; Project Hustler</p>
+            </div>
+            <div class="showcase-detail-block">
+              <div class="preamble">Tools &amp; Engine</div>
+              <p class="showcase-detail-val">Blender, Unity Engine, Adobe Photoshop, Procreate</p>
+            </div>
+            <div class="showcase-detail-block">
+              <div class="preamble">Format</div>
+              <p class="showcase-detail-val">Rapid Hackathon Sprint (Executable MVP)</p>
+            </div>
+            <div class="showcase-detail-block">
+              <div class="preamble">Category</div>
+              <p class="showcase-detail-val">Interactive Farming &amp; Educational Game</p>
+            </div>
+          </div>
+
+          <div class="showcase-intro-block">
+            <h2 class="case-lead-heading">
+              Cozy agricultural visual direction and rapid MVP product strategy under hackathon constraints.
+            </h2>
+            <p class="case-body-copy">
+              Led visual direction, environment/prop aesthetics, and startup pitch/product strategy as the team&rsquo;s Art Director and Hustler during a rapid hackathon sprint&mdash;shaping the cozy agricultural theme, scoping an executable MVP.
+            </p>
+            <div class="case-cta-row">
+              <a href="https://kirubiisfyne.itch.io/anii-grow-to-know" target="_blank" rel="noopener noreferrer" class="btn link-button">
+                <span>Play on itch.io &#x2197;</span>
+              </a>
+              <a href="../index.html#projects" class="btn link-button">
+                <span>&larr; Back to Showcase</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         VISUAL GALLERY
+         ===================================================================== -->
+    <section anchor-name="Visual Gallery" class="case-gallery">
+      <div class="case-shell">
+        <div class="preamble decorated">VISUAL GALLERY // GAMEPLAY &amp; ENVIRONMENT</div>
+
+        <figure class="gallery-feature-wide">
+          <div class="gallery-frame">
+            <img src="../images/anii-showcase.jpg" alt="Anii! Grow To Know gameplay view showing crop plots, stilt hut, scarecrows, and illustrated UI" loading="lazy">
+          </div>
+          <figcaption class="gallery-caption">
+            <span class="gallery-cap-index">01 // COZY FARM &amp; UI DIRECTION</span>
+            <span class="gallery-cap-text">Stylized low-poly farm plots, bamboo trellises, scarecrow props, and hand-illustrated 2D seed packets &amp; HUD elements integrated in Unity.</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         PIPELINE & CRAFT BREAKDOWN
+         ===================================================================== -->
+    <section anchor-name="Pipeline &amp; Craft" class="case-pipeline">
+      <div class="case-shell">
+        <div class="preamble decorated">PIPELINE &amp; RESPONSIBILITIES</div>
+        <div class="pipeline-grid">
+          <article class="pipeline-card">
+            <span class="pipeline-index">01</span>
+            <h3 class="base-heading pipeline-title">Visual Direction &amp; Cozy Theme</h3>
+            <p class="pipeline-desc">
+              Defined the warm, approachable agricultural aesthetic combining stylized 3D greenery and farmstead architecture with playful 2D illustrated UI accents.
+            </p>
+          </article>
+
+          <article class="pipeline-card">
+            <span class="pipeline-index">02</span>
+            <h3 class="base-heading pipeline-title">Environment &amp; Prop Aesthetics</h3>
+            <p class="pipeline-desc">
+              Guided environment and prop look-dev across Blender, Adobe Photoshop, and Procreate for readable crops, trellises, tools, and interactive farm plots in Unity.
+            </p>
+          </article>
+
+          <article class="pipeline-card">
+            <span class="pipeline-index">03</span>
+            <h3 class="base-heading pipeline-title">Pitch &amp; MVP Scoping</h3>
+            <p class="pipeline-desc">
+              Served as Project Hustler during the hackathon sprint&mdash;aligning product scope, pitching the educational farming concept, and shipping a playable MVP.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SHOWCASE FOOTER BANNER
+         ===================================================================== -->
+    <section anchor-name="Play Game" class="showcase-footer-banner">
+      <img src="../images/anii-showcase.jpg" alt="" class="showcase-footer-bg" aria-hidden="true">
+      <div class="showcase-footer-scrim" aria-hidden="true"></div>
+      <div class="case-shell showcase-footer-inner">
+        <div class="preamble">EXPERIENCE THE BUILD</div>
+        <h2 class="base-heading showcase-footer-heading">Play Anii! Grow To Know</h2>
+        <p class="showcase-footer-copy">
+          Try the interactive hackathon build and explore the project page on itch.io.
+        </p>
+        <a href="https://kirubiisfyne.itch.io/anii-grow-to-know" target="_blank" rel="noopener noreferrer" class="btn link-button">
+          <span>Open on itch.io &#x2197;</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SIGNATURE PAGE FLOW SECTION
+         ===================================================================== -->
+    <section class="page-flow--section" aria-label="Continue navigation">
+      <a href="kontexto.html" class="page-flow--element page-flow-prev">
+        <div class="page-flow--label-container">
+          <div class="page-flow--label">PREVIOUS</div>
+          <div class="page-flow--next-line"></div>
+        </div>
+        <div class="page-flow-title-row">
+          <svg class="page-flow--arrow arrow-left" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="page-flow--title">KonTEXTO</span>
+        </div>
+      </a>
+
+      <a href="see.html" class="page-flow--element page-flow-next">
+        <div class="page-flow--label-container">
+          <div class="page-flow--label">NEXT PROJECT</div>
+          <div class="page-flow--next-line"></div>
+        </div>
+        <div class="page-flow-title-row">
+          <span class="page-flow--title">See.</span>
+          <svg class="page-flow--arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="base-grid new-footer-links">
+        <div class="footer--link-section">
+          <ul class="footer--link-group">
+            <li class="footer--link-item"><a href="../index.html#hero" class="footer--link">Home</a></li>
+            <li class="footer--link-item"><a href="../about.html" class="footer--link">About Me</a></li>
+            <li class="footer--link-item"><a href="../index.html#services" class="footer--link">Services</a></li>
+            <li class="footer--link-item"><a href="../index.html#projects" class="footer--link">Projects</a></li>
+            <li class="footer--link-item"><a href="../index.html#contact" class="footer--link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer--socmed-group">
+          <a href="https://github.com/owleaveyah" target="_blank" rel="noopener noreferrer" class="footer--socmed-link">GitHub</a>
+          <a href="https://www.linkedin.com/in/olivia-gale-gerochi-4aab9029a/" target="_blank" rel="noopener noreferrer" class="footer--socmed-link">LinkedIn</a>
+          <a href="https://www.instagram.com/livie.gale/" target="_blank" rel="noopener noreferrer" class="footer--socmed-link">Instagram</a>
+          <a href="https://www.artstation.com/gnocchi_gerochi6" target="_blank" rel="noopener noreferrer" class="footer--socmed-link">ArtStation</a>
+        </div>
+
+        <div class="footer-bottom-details">
+          <span class="footer-logo-wordmark">OLIVIA GALE</span>
+          <p class="footer-paragraph">
+            <strong class="address-bold">Philippines &bull; Remote Worldwide</strong><br>
+            3D, Visual Development &amp; Art Direction
+          </p>
+        </div>
+
+        <div class="copywrite-text">
+          Copyright &copy; <span id="current-year"></span> Olivia Gale. All Rights Reserved.<br>
+          Built with vanilla HTML, CSS, and JavaScript.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

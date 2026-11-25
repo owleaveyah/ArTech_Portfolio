@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Services &amp; Capabilities by Olivia Gale — Concept Art, Environment, Characters, and Props for games and real-time 3D worlds.">
+  <title>Services &amp; Capabilities | Olivia Gale</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function () {
+      var saved = localStorage.getItem("portfolio-theme");
+      if (saved === "light") {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+</head>
+<body class="services-vertical-page">
+  <div class="header-gradient" aria-hidden="true"></div>
+
+  <!-- Left Vertical Page Decorator -->
+  <div class="page-decorator blend-mode--difference" aria-hidden="true">
+    <div class="scroll-icon-indicator">
+      <div class="scroll-icon-mouse"></div>
+      <div class="scroll-arrow-line"></div>
+    </div>
+    <div class="scroll-indicator-label" id="page-decorator-label">SERVICES // CAPABILITIES</div>
+  </div>
+
+  <!-- Right Vertical Scroll Marker Rail -->
+  <nav class="scroll-marker-block blend-mode--difference" id="scroll-marker-block" aria-label="Section scroll markers"></nav>
+
+  <!-- Fixed Minimal Top Navigation Bar -->
+  <header class="nav-bar" role="banner">
+    <div class="nav-bar-container">
+      <div class="menu-fader" aria-hidden="true"></div>
+
+      <a href="index.html" class="brand-link" aria-label="Olivia Gale Home">
+        <span class="brand-mark">OG</span>
+        <span class="brand-wordmark">OLIVIA GALE</span>
+      </a>
+
+      <div class="nav-right-controls">
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light or dark theme" title="Toggle theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <button id="menu-toggle" class="nav-menu-button" type="button" aria-expanded="false" aria-controls="nav-drawer" aria-label="Toggle navigation menu">
+          <span class="preamble label-menu">MENU</span>
+          <span class="menu-icon-bars" aria-hidden="true">
+            <span class="menu-bar-line top"></span>
+            <span class="menu-bar-line bottom"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Right Slide-Out Navigation Drawer -->
+  <div id="nav-drawer" class="nav-drawer" aria-hidden="true">
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    <nav class="menu-bar" aria-label="Primary Navigation">
+      <div class="menu-bg-artwork" aria-hidden="true"></div>
+      <div class="menu-container">
+        <ul class="navigation-list">
+          <li class="nav-list-item"><a href="index.html#hero" class="main-nav-link drawer-jump">Home</a></li>
+          <li class="nav-list-item"><a href="index.html#projects" class="main-nav-link drawer-jump">Projects</a></li>
+          <li class="nav-list-item has-subnav">
+            <div class="nav-accordion-row">
+              <a href="services.html" class="main-nav-link drawer-jump">Services</a>
+              <button type="button" class="accordion-toggle" aria-expanded="true" aria-label="Toggle services submenu">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+            </div>
+            <ul class="subnav-list open">
+              <li><a href="#concept-art" class="sub-nav-item drawer-jump">Concept Art</a></li>
+              <li><a href="#environment" class="sub-nav-item drawer-jump">Environment</a></li>
+              <li><a href="#characters" class="sub-nav-item drawer-jump">Characters</a></li>
+              <li><a href="#props" class="sub-nav-item drawer-jump">Props</a></li>
+            </ul>
+          </li>
+          <li class="nav-list-item"><a href="about.html" class="main-nav-link drawer-jump">About Me</a></li>
+          <li class="nav-list-item"><a href="index.html#contact" class="main-nav-item drawer-jump">Contact</a></li>
+        </ul>
+
+        <div class="nav-socmed">
+          <div class="preamble nav-menu-socmed">Connect with me</div>
+          <div class="socmed-group on-menu">
+            <a href="https://github.com/owleaveyah" target="_blank" rel="noopener noreferrer" class="nav-socmed-link" aria-label="GitHub">GitHub</a>
+            <a href="https://www.linkedin.com/in/olivia-gale-gerochi-4aab9029a/" target="_blank" rel="noopener noreferrer" class="nav-socmed-link" aria-label="LinkedIn">LinkedIn</a>
+            <a href="https://www.instagram.com/livie.gale/" target="_blank" rel="noopener noreferrer" class="nav-socmed-link" aria-label="Instagram">Instagram</a>
+            <a href="https://www.artstation.com/gnocchi_gerochi6" target="_blank" rel="noopener noreferrer" class="nav-socmed-link" aria-label="ArtStation">ArtStation</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+    <!-- =====================================================================
+         SERVICES HERO / HEADER BAND
+         ===================================================================== -->
+    <section anchor-name="Overview" class="services-page-hero">
+      <div class="case-shell">
+        <div class="preamble decorated">SERVICES &amp; CAPABILITIES</div>
+        <h1 class="base-heading case-title">3D, Visual Development &amp; Art Direction</h1>
+        <p class="services-hero-lead">
+          End-to-end visual craft spanning concept development, modular 3D environments, stylized character pipelines, and story-driven prop assets for games and interactive experiences.
+        </p>
+
+        <nav class="services-jump-row" aria-label="Jump to service">
+          <a href="#concept-art" class="services-jump-link">01. Concept Art</a>
+          <a href="#environment" class="services-jump-link">02. Environment</a>
+          <a href="#characters" class="services-jump-link">03. Characters</a>
+          <a href="#props" class="services-jump-link">04. Props</a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         01 // CONCEPT ART
+         ===================================================================== -->
+    <section id="concept-art" anchor-name="01. Concept Art" class="service-band">
+      <div class="case-shell">
+        <div class="service-band-grid">
+          <div class="service-band-body">
+            <div class="preamble">01 // VISUAL DEVELOPMENT</div>
+            <h2 class="base-heading service-band-title">Concept Art</h2>
+            <p class="case-body-copy">
+              Translating art direction into evocative mood pieces, environment key art, color studies, and visual development concepts for games and atmospheric worlds.
+            </p>
+            <ul class="service-band-list">
+              <li>Environment &amp; Mood Key Art</li>
+              <li>Color &amp; Lighting Studies</li>
+              <li>Visual Development</li>
+              <li>Prop &amp; Companion Concepting</li>
+              <li>Adobe Photoshop &amp; Procreate</li>
+            </ul>
+            <div class="case-cta-row">
+              <a href="index.html#contact" class="btn link-button">
+                <span>Inquire About Concept Art</span>
+              </a>
+              <a href="https://www.artstation.com/gnocchi_gerochi6" target="_blank" rel="noopener noreferrer" class="btn link-button">
+                <span>ArtStation &#x2197;</span>
+              </a>
+            </div>
+          </div>
+
+          <figure class="service-band-media">
+            <div class="gallery-frame">
+              <img src="images/service-concept-art.jpg" alt="Cyberpunk environment and character mood concept art by Olivia Gale" loading="lazy">
+            </div>
+            <figcaption class="gallery-caption">
+              <span class="gallery-cap-index">CONCEPT ART // ENVIRONMENT &amp; CHARACTER MOOD</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         02 // ENVIRONMENT
+         ===================================================================== -->
+    <section id="environment" anchor-name="02. Environment" class="service-band service-band-alt">
+      <div class="case-shell">
+        <div class="service-band-grid service-band-reverse">
+          <div class="service-band-body">
+            <div class="preamble">02 // WORLDBUILDING &amp; REAL-TIME</div>
+            <h2 class="base-heading service-band-title">Environment</h2>
+            <p class="case-body-copy">
+              Designing modular 3D architectural kits, atmospheric worlds, and real-time lighting setups built across Blender, Unity Engine, and Unreal Engine 5.
+            </p>
+            <ul class="service-band-list">
+              <li>Modular Environment Kits</li>
+              <li>Worldbuilding &amp; Set Dressing</li>
+              <li>Blender &amp; UE5 Lumen</li>
+              <li>Unity Real-Time Lighting</li>
+              <li>Collision &amp; Asset Integration</li>
+            </ul>
+            <div class="case-cta-row">
+              <a href="index.html#contact" class="btn link-button">
+                <span>Inquire About Environments</span>
+              </a>
+            </div>
+          </div>
+
+          <figure class="service-band-media">
+            <div class="gallery-frame">
+              <img src="images/service-environment.jpg" alt="Atmospheric 3D environment render featuring a silhouetted tower on a rocky island at sunset" loading="lazy">
+            </div>
+            <figcaption class="gallery-caption">
+              <span class="gallery-cap-index">ENVIRONMENT // ATMOSPHERIC WORLDBUILDING &amp; LIGHTING</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         03 // CHARACTERS
+         ===================================================================== -->
+    <section id="characters" anchor-name="03. Characters" class="service-band">
+      <div class="case-shell">
+        <div class="service-band-grid">
+          <div class="service-band-body">
+            <div class="preamble">03 // LOW-POLY &amp; STYLIZED</div>
+            <h2 class="base-heading service-band-title">Characters</h2>
+            <p class="case-body-copy">
+              Crafting expressive low-poly and stylized 3D character models with cohesive silhouette language and hand-painted or cel-shaded texture passes.
+            </p>
+            <ul class="service-band-list">
+              <li>Low-Poly &amp; Stylized Modeling</li>
+              <li>Character Texturing</li>
+              <li>Variant &amp; Wardrobe Sets</li>
+              <li>Cel-Shaded &amp; Retro-3D Passes</li>
+              <li>Blender &amp; Allegorithmic Substance Painter</li>
+            </ul>
+            <div class="case-cta-row">
+              <a href="index.html#contact" class="btn link-button">
+                <span>Inquire About Characters</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="service-band-media characters-pair-grid">
+            <figure>
+              <div class="gallery-frame">
+                <img src="images/service-characters-1.jpg" alt="Mr. Bahala character illustration suspended beneath glowing water ripples" loading="lazy">
+              </div>
+              <figcaption class="gallery-caption">
+                <span class="gallery-cap-index">CHARACTER KEY ART // MR. BAHALA</span>
+              </figcaption>
+            </figure>
+
+            <figure>
+              <div class="gallery-frame">
+                <img src="images/service-characters-2.jpg" alt="Kaguya &amp; Amaterasu celestial character illustration against a full moon" loading="lazy">
+              </div>
+              <figcaption class="gallery-caption">
+                <span class="gallery-cap-index">CHARACTER STUDY // KAGUYA &amp; AMATERASU</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         04 // PROPS
+         ===================================================================== -->
+    <section id="props" anchor-name="04. Props" class="service-band service-band-alt">
+      <div class="case-shell">
+        <div class="service-band-grid service-band-reverse">
+          <div class="service-band-body">
+            <div class="preamble">04 // PBR &amp; STYLIZED ASSETS</div>
+            <h2 class="base-heading service-band-title">Props</h2>
+            <p class="case-body-copy">
+              Building story-driven hero and dressing props with clean topology, UV mapping, and PBR or stylized material storytelling tailored to the world aesthetic.
+            </p>
+            <ul class="service-band-list">
+              <li>3D Prop Modeling</li>
+              <li>PBR &amp; Stylized Texturing</li>
+              <li>UV Layout &amp; Surface Detail</li>
+              <li>Environment Dressing Assets</li>
+              <li>GIMP, Photoshop &amp; Substance Painter</li>
+            </ul>
+            <div class="case-cta-row">
+              <a href="index.html#contact" class="btn link-button">
+                <span>Inquire About Props</span>
+              </a>
+            </div>
+          </div>
+
+          <figure class="service-band-media">
+            <div class="gallery-frame">
+              <img src="images/service-props.jpg" alt="3D carved jade and gold kintsugi hero prop chest with glowing spirit wisps" loading="lazy">
+            </div>
+            <figcaption class="gallery-caption">
+              <span class="gallery-cap-index">PROPS // PBR MATERIAL STORYTELLING &amp; HERO ASSETS</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SIGNATURE PAGE FLOW SECTION
+         ===================================================================== -->
+    <section class="page-flow--section" aria-label="Continue navigation">
+      <a href="index.html#projects" class="page-flow--element page-flow-prev">
+        <div class="page-flow--label-container">
+          <div class="page-flow--label">PREVIOUS</div>
+          <div class="page-flow--next-line"></div>
+        </div>
+        <div class="page-flow-title-row">
+          <svg class="page-flow--arrow arrow-left" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="page-flow--title">Featured Projects</span>
+        </div>
+      </a>
+
+      <a href="index.html#contact" class="page-flow--element page-flow-next">
+        <div class="page-flow--label-container">
+          <div class="page-flow--label">NEXT</div>
+          <div class="page-flow--next-line"></div>
+        </div>
+        <div class="page-flow-title-row">
+          <span class="page-flow--title">Start a Conversation</span>
+          <svg class="page-flow--arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="base-grid new-footer-links">
+        <div class="footer--link-section">
+          <ul class="footer--link-group">
+            <li class="footer--link-item"><a href="index.html#hero" class="footer--link">Home</a></li>
+            <li class="footer--link-item"><a href="about.html" class="footer--link">About Me</a></li>
+            <li class="footer--link-item"><a href="services.html" class="footer--link">Services</a></li>
+            <li class="footer--link-item"><a href="index.html#projects" class="footer--link">Projects</a></li>
+            <li class="footer--link-item"><a href="index.html#contact" class="footer--link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer--socmed-group">
+          <a href="https://github.com/owleaveyah" target="_blank" rel="noopener noreferrer" class="footer--socmed-link">GitHub</a>
+          <a href="https://www.linkedin.com/in/olivia-gale-gerochi-4aab9029a/" target="_blank" rel="noopener noreferrer" class="footer--socmed-link">LinkedIn</a>
+          <a href="https://www.instagram.com/livie.gale/" target="_blank" rel="noopener noreferrer" class="footer--socmed-link">Instagram</a>
+          <a href="https://www.artstation.com/gnocchi_gerochi6" target="_blank" rel="noopener noreferrer" class="footer--socmed-link">ArtStation</a>
+        </div>
+
+        <div class="footer-bottom-details">
+          <span class="footer-logo-wordmark">OLIVIA GALE</span>
+          <p class="footer-paragraph">
+            <strong class="address-bold">Philippines &bull; Remote Worldwide</strong><br>
+            3D, Visual Development &amp; Art Direction
+          </p>
+        </div>
+
+        <div class="copywrite-text">
+          Copyright &copy; <span id="current-year"></span> Olivia Gale. All Rights Reserved.<br>
+          Built with vanilla HTML, CSS, and JavaScript.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

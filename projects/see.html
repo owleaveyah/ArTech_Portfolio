@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="See. — Atmospheric Retro-3D Psychological Game (Game Dev Final Project). 3D Artist, Character &amp; Environment Texturing by Olivia Gale using Blender, GIMP, and Allegorithmic Substance Painter.">
+  <title>See. | Case Study — Olivia Gale</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script>
+    (function () {
+      var saved = localStorage.getItem("portfolio-theme");
+      if (saved === "light") {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+</head>
+<body class="case-study-page">
+  <div class="header-gradient" aria-hidden="true"></div>
+
+  <!-- Left Vertical Page Decorator -->
+  <div class="page-decorator blend-mode--difference" aria-hidden="true">
+    <div class="scroll-icon-indicator">
+      <div class="scroll-icon-mouse"></div>
+      <div class="scroll-arrow-line"></div>
+    </div>
+    <div class="scroll-indicator-label" id="page-decorator-label">SEE. // CASE STUDY</div>
+  </div>
+
+  <!-- Right Vertical Scroll Marker Rail -->
+  <nav class="scroll-marker-block blend-mode--difference" id="scroll-marker-block" aria-label="Section scroll markers"></nav>
+
+  <!-- Fixed Minimal Top Navigation Bar -->
+  <header class="nav-bar" role="banner">
+    <div class="nav-bar-container">
+      <div class="menu-fader" aria-hidden="true"></div>
+
+      <a href="../index.html" class="brand-link" aria-label="Olivia Gale Home">
+        <span class="brand-mark">OG</span>
+        <span class="brand-wordmark">OLIVIA GALE</span>
+      </a>
+
+      <div class="nav-right-controls">
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light or dark theme" title="Toggle theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <button id="menu-toggle" class="nav-menu-button" type="button" aria-expanded="false" aria-controls="nav-drawer" aria-label="Toggle navigation menu">
+          <span class="preamble label-menu">MENU</span>
+          <span class="menu-icon-bars" aria-hidden="true">
+            <span class="menu-bar-line top"></span>
+            <span class="menu-bar-line bottom"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Right Slide-Out Navigation Drawer -->
+  <div id="nav-drawer" class="nav-drawer" aria-hidden="true">
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    <nav class="menu-bar" aria-label="Primary Navigation">
+      <div class="menu-bg-artwork" aria-hidden="true"></div>
+      <div class="menu-container">
+        <ul class="navigation-list">
+          <li class="nav-list-item"><a href="../index.html#hero" class="main-nav-link drawer-jump">Home</a></li>
+          <li class="nav-list-item"><a href="../index.html#projects" class="main-nav-link drawer-jump">Projects</a></li>
+          <li class="nav-list-item"><a href="../index.html#services" class="main-nav-link drawer-jump">Services</a></li>
+          <li class="nav-list-item"><a href="../about.html" class="main-nav-link drawer-jump">About Me</a></li>
+          <li class="nav-list-item"><a href="../index.html#contact" class="main-nav-link drawer-jump">Contact</a></li>
+        </ul>
+
+        <div class="nav-socmed">
+          <div class="preamble nav-menu-socmed">Connect with me</div>
+          <div class="socmed-group on-menu">
+            <a href="https://github.com/owleaveyah" target="_blank" rel="noopener noreferrer" class="nav-socmed-link" aria-label="GitHub">GitHub</a>
+            <a href="https://www.linkedin.com/in/olivia-gale-gerochi-4aab9029a/" target="_blank" rel="noopener noreferrer" class="nav-socmed-link" aria-label="LinkedIn">LinkedIn</a>
+            <a href="https://www.instagram.com/livie.gale/" target="_blank" rel="noopener noreferrer" class="nav-socmed-link" aria-label="Instagram">Instagram</a>
+            <a href="https://www.artstation.com/gnocchi_gerochi6" target="_blank" rel="noopener noreferrer" class="nav-socmed-link" aria-label="ArtStation">ArtStation</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+    <!-- =====================================================================
+         CASE STUDY HERO FOLD (Sunset Horizon & Hiromi)
+         ===================================================================== -->
+    <section anchor-name="See." class="project--panel showcase-hero">
+      <img src="../images/see-hero.jpg" alt="College Girl Hiromi standing before the sunset ocean in See." class="project-hero-img see-hero-img">
+      <div class="project-hero-fader" aria-hidden="true"></div>
+    </section>
+
+    <!-- =====================================================================
+         PROJECT OVERVIEW & SPECS GRID
+         ===================================================================== -->
+    <section anchor-name="Overview" class="case-overview">
+      <div class="case-shell">
+        <div class="preamble decorated">PROJECT 03 &bull; ATMOSPHERIC RETRO-3D PSYCHOLOGICAL GAME (FINAL PROJECT)</div>
+        <h1 class="base-heading case-title">See.</h1>
+
+        <div class="showcase-details">
+          <div class="showcase-detail-group">
+            <div class="showcase-detail-block">
+              <div class="preamble">Role</div>
+              <p class="showcase-detail-val">3D Artist, Character &amp; Environment Texturing</p>
+            </div>
+            <div class="showcase-detail-block">
+              <div class="preamble">Tools</div>
+              <p class="showcase-detail-val">Blender, GIMP, Allegorithmic Substance Painter</p>
+            </div>
+            <div class="showcase-detail-block">
+              <div class="preamble">Team / Collective</div>
+              <p class="showcase-detail-val">Group See / Ukiyo</p>
+            </div>
+            <div class="showcase-detail-block">
+              <div class="preamble">Category</div>
+              <p class="showcase-detail-val">PS1-Inspired Psychological Narrative Game</p>
+            </div>
+          </div>
+
+          <div class="showcase-intro-block">
+            <h2 class="case-lead-heading">
+              Surreal retro-3D transitioning spaces between a fisheries college campus and a hospital ward.
+            </h2>
+            <p class="case-body-copy">
+              Co-developed a PS1-inspired psychological narrative game (Group See / Ukiyo) following protagonist Hiromi across surreal transitioning spaces between a fisheries college campus and a hospital ward. Designed and textured low-poly character variants (College Girl Hiromi &amp; Hospital Patient Hiromi), modular architectural hallways, and atmospheric lighting scenes in Blender.
+            </p>
+            <div class="case-cta-row">
+              <a href="../index.html#projects" class="btn link-button">
+                <span>&larr; Back to Showcase</span>
+              </a>
+              <a href="../index.html#contact" class="btn link-button">
+                <span>Discuss This Work</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         3D ASSETS, TEXTURES & LIGHTING BREAKDOWN (All 5 Production Sheets)
+         ===================================================================== -->
+    <section anchor-name="Assets &amp; Textures" class="case-gallery">
+      <div class="case-shell">
+        <div class="preamble decorated">ASSET BUILDING // TEXTURES, 3D MODELS &amp; LIGHTING</div>
+
+        <div class="see-sheets-grid">
+          <figure class="sheet-card">
+            <div class="gallery-frame">
+              <img src="../images/see-lighting.jpg" alt="Atmospheric Blender lighting scenes with Hospital Patient Hiromi and fish tank desk" loading="lazy">
+            </div>
+            <figcaption class="gallery-caption">
+              <span class="gallery-cap-index">01 // ATMOSPHERIC LIGHTING</span>
+              <span class="gallery-cap-text">Blender lighting scenes featuring Hospital Patient Hiromi under volumetric light cones and the fish tank room.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="sheet-card">
+            <div class="gallery-frame">
+              <img src="../images/see-hiromi.jpg" alt="Asset Building 3D Models sheet for College Girl Hiromi turnaround and close-up" loading="lazy">
+            </div>
+            <figcaption class="gallery-caption">
+              <span class="gallery-cap-index">02 // CHARACTER MODEL</span>
+              <span class="gallery-cap-text">College Girl Hiromi low-poly turnaround, silhouette, and hand-painted facial texture detail in Blender.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="sheet-card">
+            <div class="gallery-frame">
+              <img src="../images/see-textures.jpg" alt="Asset Building Textures sheet covering Hiromi variants, Hospital-College, Hallways, Stool, and Flower Pot" loading="lazy">
+            </div>
+            <figcaption class="gallery-caption">
+              <span class="gallery-cap-index">03 // UV TEXTURE MAPS</span>
+              <span class="gallery-cap-text">Character and environment texture sheets: Hiromi variants, Hospital-College, Last Hallway, College (Fishroom), College Hallway, Stool &amp; Flower Pot.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="sheet-card">
+            <div class="gallery-frame">
+              <img src="../images/see-hallways.jpg" alt="Asset Building 3D Models sheet for modular hallways exterior and interior corridors" loading="lazy">
+            </div>
+            <figcaption class="gallery-caption">
+              <span class="gallery-cap-index">04 // MODULAR HALLWAYS</span>
+              <span class="gallery-cap-text">Modular corridor geometry and textured interior/exterior perspectives built for smooth scene transitions.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="sheet-card sheet-card-wide">
+            <div class="gallery-frame">
+              <img src="../images/see-hospital-college.jpg" alt="Hospital-College modular architecture and weathered room interior sheets" loading="lazy">
+            </div>
+            <figcaption class="gallery-caption">
+              <span class="gallery-cap-index">05 // HOSPITAL-COLLEGE SPACES</span>
+              <span class="gallery-cap-text">Blended hospital ward and fisheries college architectural modules, doorways, tiled floors, and weathered wall textures.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         PIPELINE & CRAFT BREAKDOWN
+         ===================================================================== -->
+    <section anchor-name="Pipeline &amp; Craft" class="case-pipeline">
+      <div class="case-shell">
+        <div class="preamble decorated">PIPELINE &amp; RESPONSIBILITIES</div>
+        <div class="pipeline-grid">
+          <article class="pipeline-card">
+            <span class="pipeline-index">01</span>
+            <h3 class="base-heading pipeline-title">Low-Poly Character Variants</h3>
+            <p class="pipeline-desc">
+              Modeled and textured protagonist variants in Blender&mdash;College Girl Hiromi and Hospital Patient Hiromi&mdash;preserving authentic retro PS1 low-poly silhouettes and narrative contrast.
+            </p>
+          </article>
+
+          <article class="pipeline-card">
+            <span class="pipeline-index">02</span>
+            <h3 class="base-heading pipeline-title">Modular Hallways &amp; Props</h3>
+            <p class="pipeline-desc">
+              Built and textured Hospital-College rooms, modular hallways, College (Fishroom), Stool, and Flower Pot assets to stage surreal transitions across campus and ward spaces.
+            </p>
+          </article>
+
+          <article class="pipeline-card">
+            <span class="pipeline-index">03</span>
+            <h3 class="base-heading pipeline-title">Texturing &amp; Blender Lighting</h3>
+            <p class="pipeline-desc">
+              Authored weathered retro-3D surface textures using GIMP and Allegorithmic Substance Painter alongside volumetric lighting scenes in Blender.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SIGNATURE PAGE FLOW SECTION
+         ===================================================================== -->
+    <section class="page-flow--section" aria-label="Continue navigation">
+      <a href="anii-grow-to-know.html" class="page-flow--element page-flow-prev">
+        <div class="page-flow--label-container">
+          <div class="page-flow--label">PREVIOUS PROJECT</div>
+          <div class="page-flow--next-line"></div>
+        </div>
+        <div class="page-flow-title-row">
+          <svg class="page-flow--arrow arrow-left" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="page-flow--title">Anii! Grow To Know</span>
+        </div>
+      </a>
+
+      <a href="imara.html" class="page-flow--element page-flow-next">
+        <div class="page-flow--label-container">
+          <div class="page-flow--label">NEXT PROJECT</div>
+          <div class="page-flow--next-line"></div>
+        </div>
+        <div class="page-flow-title-row">
+          <span class="page-flow--title">IMARA</span>
+          <svg class="page-flow--arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="base-grid new-footer-links">
+        <div class="footer--link-section">
+          <ul class="footer--link-group">
+            <li class="footer--link-item"><a href="../index.html#hero" class="footer--link">Home</a></li>
+            <li class="footer--link-item"><a href="../about.html" class="footer--link">About Me</a></li>
+            <li class="footer--link-item"><a href="../index.html#services" class="footer--link">Services</a></li>
+            <li class="footer--link-item"><a href="../index.html#projects" class="footer--link">Projects</a></li>
+            <li class="footer--link-item"><a href="../index.html#contact" class="footer--link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer--socmed-group">
+          <a href="https://github.com/owleaveyah" target="_blank" rel="noopener noreferrer" class="footer--socmed-link">GitHub</a>
+          <a href="https://www.linkedin.com/in/olivia-gale-gerochi-4aab9029a/" target="_blank" rel="noopener noreferrer" class="footer--socmed-link">LinkedIn</a>
+          <a href="https://www.instagram.com/livie.gale/" target="_blank" rel="noopener noreferrer" class="footer--socmed-link">Instagram</a>
+          <a href="https://www.artstation.com/gnocchi_gerochi6" target="_blank" rel="noopener noreferrer" class="footer--socmed-link">ArtStation</a>
+        </div>
+
+        <div class="footer-bottom-details">
+          <span class="footer-logo-wordmark">OLIVIA GALE</span>
+          <p class="footer-paragraph">
+            <strong class="address-bold">Philippines &bull; Remote Worldwide</strong><br>
+            3D, Visual Development &amp; Art Direction
+          </p>
+        </div>
+
+        <div class="copywrite-text">
+          Copyright &copy; <span id="current-year"></span> Olivia Gale. All Rights Reserved.<br>
+          Built with vanilla HTML, CSS, and JavaScript.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

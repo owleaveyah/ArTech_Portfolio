@@ -2,32 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Olivia Gale">
-  <title>Olivia Gale | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Olivia Gale is a Philippine-based Visual Developer &amp; 3D Artist crafting atmospheric worlds, PBR assets, and interactive real-time experiences.">
+  <title>Olivia Gale | 3D, Visual Development &amp; Art Direction</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script>
-    (function() {
-      const saved = localStorage.getItem("portfolio-theme");
-      if (saved === "light" || (!saved && window.matchMedia("(prefers-color-scheme: light)").matches)) {
+    (function () {
+      var saved = localStorage.getItem("portfolio-theme");
+      if (saved === "light") {
         document.documentElement.setAttribute("data-theme", "light");
       }
     })();
   </script>
 </head>
 <body>
-  <header>
-    <nav class="nav-container">
-      <a href="#" class="brand">Olivia Gale</a>
-      <div class="nav-actions">
-        <ul id="nav-menu" class="nav-links">
-          <li><a href="#about" class="nav-item-link">About</a></li>
-          <li><a href="#projects" class="nav-item-link">Projects</a></li>
-          <li><a href="#contact" class="nav-item-link">Contact</a></li>
-        </ul>
-        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light and dark theme" title="Toggle theme">
-          <!-- Sun icon (shown in dark mode) -->
-          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- Top-down atmospheric header gradient -->
+  <div class="header-gradient" aria-hidden="true"></div>
+
+  <!-- Left Vertical Page Decorator (Pixel Mafia signature chrome) -->
+  <div class="page-decorator blend-mode--difference" aria-hidden="true">
+    <div class="scroll-icon-indicator">
+      <div class="scroll-icon-mouse"></div>
+      <div class="scroll-arrow-line"></div>
+    </div>
+    <div class="scroll-indicator-label" id="page-decorator-label">WE ARE OLIVIA GALE</div>
+  </div>
+
+  <!-- Right Vertical Scroll Marker Rail (auto-populated from [anchor-name]) -->
+  <nav class="scroll-marker-block blend-mode--difference" id="scroll-marker-block" aria-label="Section scroll markers"></nav>
+
+  <!-- Fixed Minimal Top Navigation Bar -->
+  <header class="nav-bar" role="banner">
+    <div class="nav-bar-container">
+      <div class="menu-fader" aria-hidden="true"></div>
+
+      <a href="#hero" class="brand-link" aria-label="Olivia Gale Home">
+        <span class="brand-mark">OG</span>
+        <span class="brand-wordmark">OLIVIA GALE</span>
+      </a>
+
+      <div class="nav-right-controls">
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light or dark theme" title="Toggle theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -38,82 +57,641 @@
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
           </svg>
-          <!-- Moon icon (shown in light mode) -->
-          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
-        <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
-          <span class="hamburger-bar"></span>
-          <span class="hamburger-bar"></span>
-          <span class="hamburger-bar"></span>
+
+        <button id="menu-toggle" class="nav-menu-button" type="button" aria-expanded="false" aria-controls="nav-drawer" aria-label="Toggle navigation menu">
+          <span class="preamble label-menu">MENU</span>
+          <span class="menu-icon-bars" aria-hidden="true">
+            <span class="menu-bar-line top"></span>
+            <span class="menu-bar-line bottom"></span>
+          </span>
         </button>
       </div>
-    </nav>
+    </div>
   </header>
 
+  <!-- Right Slide-Out Navigation Drawer (with expandable Services & Projects sub-menus) -->
+  <div id="nav-drawer" class="nav-drawer" aria-hidden="true">
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    <nav class="menu-bar" aria-label="Primary Navigation">
+      <div class="menu-bg-artwork" aria-hidden="true"></div>
+      <div class="menu-container">
+        <ul class="navigation-list">
+          <li class="nav-list-item">
+            <a href="#hero" class="main-nav-link drawer-jump">Home</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="about.html" class="main-nav-link drawer-jump">About Me</a>
+          </li>
+          <li class="nav-list-item has-subnav">
+            <div class="nav-accordion-row">
+              <a href="#services" class="main-nav-link drawer-jump">Services</a>
+              <button type="button" class="accordion-toggle" aria-expanded="false" aria-label="Toggle services submenu">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+            </div>
+            <ul class="subnav-list">
+              <li><button type="button" class="sub-nav-item" data-target-section="#services" data-service-slide="0">Concept Art</button></li>
+              <li><button type="button" class="sub-nav-item" data-target-section="#services" data-service-slide="1">Environment</button></li>
+              <li><button type="button" class="sub-nav-item" data-target-section="#services" data-service-slide="2">Characters</button></li>
+              <li><button type="button" class="sub-nav-item" data-target-section="#services" data-service-slide="3">Props</button></li>
+            </ul>
+          </li>
+          <li class="nav-list-item has-subnav">
+            <div class="nav-accordion-row">
+              <a href="#projects" class="main-nav-link drawer-jump">Projects</a>
+              <button type="button" class="accordion-toggle" aria-expanded="false" aria-label="Toggle projects submenu">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+            </div>
+            <ul class="subnav-list">
+              <li><button type="button" class="sub-nav-item" data-target-section="#projects" data-project-slide="0">KonTEXTO</button></li>
+              <li><button type="button" class="sub-nav-item" data-target-section="#projects" data-project-slide="1">Anii! Grow To Know</button></li>
+              <li><button type="button" class="sub-nav-item" data-target-section="#projects" data-project-slide="2">See.</button></li>
+              <li><button type="button" class="sub-nav-item" data-target-section="#projects" data-project-slide="3">IMARA</button></li>
+            </ul>
+          </li>
+          <li class="nav-list-item">
+            <a href="#contact" class="main-nav-link drawer-jump">Collaboration</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="#contact" class="main-nav-link drawer-jump">Contact</a>
+          </li>
+        </ul>
+
+        <div class="nav-socmed">
+          <div class="preamble nav-menu-socmed">Connect with me</div>
+          <div class="socmed-group on-menu">
+            <a href="https://github.com/owleaveyah" target="_blank" rel="noopener noreferrer" class="nav-socmed-link" aria-label="GitHub">GitHub</a>
+            <a href="https://www.linkedin.com/in/olivia-gale-gerochi-4aab9029a/" target="_blank" rel="noopener noreferrer" class="nav-socmed-link" aria-label="LinkedIn">LinkedIn</a>
+            <a href="https://www.instagram.com/livie.gale/" target="_blank" rel="noopener noreferrer" class="nav-socmed-link" aria-label="Instagram">Instagram</a>
+            <a href="https://www.artstation.com/gnocchi_gerochi6" target="_blank" rel="noopener noreferrer" class="nav-socmed-link" aria-label="ArtStation">ArtStation</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
   <main>
-    <section id="hero" class="section hero">
-      <div class="content-wrapper">
-        <p class="eyebrow">Hello, my name is</p>
-        <h1>Olivia Gale</h1>
-        <p class="tagline">Developer &amp; Designer</p>
-        <p class="intro">
-          Welcome to my portfolio. Explore my featured projects and get in touch.
-        </p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+    <!-- =====================================================================
+         FOLD 1: HERO / FIRST FOLD (.panel.pm-type)
+         ===================================================================== -->
+    <section id="hero" anchor-name="We Are Olivia Gale" class="panel pm-type">
+      <canvas id="hero-particles" class="hero-particles" aria-hidden="true"></canvas>
+
+      <!-- Sculptural 3D OG Centerpiece Artwork -->
+      <div class="hero-backdrop-art" aria-hidden="true">
+        <div class="hero-glow-orb"></div>
+        <div class="hero-grid-overlay"></div>
+        <img src="images/og-hero.png" alt="" class="hero-bg-artwork" decoding="async">
+        <div class="hero-scrim"></div>
+      </div>
+
+      <!-- Lower-right Editorial Intro Block (matches Pixel Mafia first fold) -->
+      <div class="section-heading-block--firstfold home-first-fold-content">
+        <div class="preamble home">3D, VISUAL DEVELOPMENT &amp; ART DIRECTION</div>
+        <h1 class="pullouts medium home-intro-block">
+          <strong>OLIVIA GALE</strong> IS A PHILIPPINE-BASED VISUAL DEVELOPER &amp; 3D ARTIST. CRAFTING ATMOSPHERIC WORLDS, PBR ASSETS, AND INTERACTIVE REAL-TIME EXPERIENCES.
+        </h1>
+        <div class="hero-btn-group">
+          <a href="about.html" class="btn link-button who-we-are">
+            <span>Who I am</span>
+          </a>
+          <a href="#projects" class="btn link-button secondary-wipe">
+            <span>View work</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section">
-      <div class="content-wrapper">
-        <h2>About Me</h2>
-        <p>
-          A brief introduction about your background, skills, and areas of expertise.
-        </p>
+    <!-- =====================================================================
+         FOLD 2: TOOLKIT & TECHNOLOGIES DUAL-ROW CAROUSEL (.partners)
+         ===================================================================== -->
+    <section id="toolkit" anchor-name="Core Toolkit" class="panel landscape-panel partners" aria-label="Core Toolkit and Stack">
+      <div class="base-grid home-partners">
+        <div class="section-heading-block partner-heading">
+          <div class="preamble title center">Core Toolkit &amp; Stack</div>
+          <p class="toolkit-subcaption">
+            <strong>Primary:</strong> Blender, Allegorithmic Substance Painter, Procreate &amp; 2D Illustration (Photoshop, GIMP) &nbsp;&bull;&nbsp; <strong>Foundational / Novice Pipelines:</strong> Unreal Engine 5, Autodesk Maya, Unity Engine &amp; Interactive Web
+          </p>
+        </div>
+      </div>
+
+      <div class="section-logo-carousel">
+        <div class="gradient-fade left" aria-hidden="true"></div>
+        <div class="gradient-fade right" aria-hidden="true"></div>
+
+        <!-- Top Carousel Row (3D, Engines & Visual Dev) -->
+        <div class="partners-carousel-track track-top">
+          <div class="partners-carousel-row">
+            <span class="partner-item partner-primary">BLENDER</span>
+            <span class="partner-item partner-primary">ALLEGORITHMIC SUBSTANCE PAINTER</span>
+            <span class="partner-item partner-primary">PROCREATE</span>
+            <span class="partner-item partner-primary">ADOBE PHOTOSHOP</span>
+            <span class="partner-item partner-primary">GIMP</span>
+            <span class="partner-item">UNREAL ENGINE 5</span>
+            <span class="partner-item">AUTODESK MAYA</span>
+            <span class="partner-item">UNITY ENGINE</span>
+          </div>
+          <div class="partners-carousel-row" aria-hidden="true">
+            <span class="partner-item partner-primary">BLENDER</span>
+            <span class="partner-item partner-primary">ALLEGORITHMIC SUBSTANCE PAINTER</span>
+            <span class="partner-item partner-primary">PROCREATE</span>
+            <span class="partner-item partner-primary">ADOBE PHOTOSHOP</span>
+            <span class="partner-item partner-primary">GIMP</span>
+            <span class="partner-item">UNREAL ENGINE 5</span>
+            <span class="partner-item">AUTODESK MAYA</span>
+            <span class="partner-item">UNITY ENGINE</span>
+          </div>
+        </div>
+
+        <!-- Bottom Carousel Row (Design, Version Control & Interactive Web) -->
+        <div class="partners-carousel-track track-bottom">
+          <div class="partners-carousel-row">
+            <span class="partner-item">CANVA</span>
+            <span class="partner-item">GIT</span>
+            <span class="partner-item">GITHUB</span>
+            <span class="partner-item">NEXT.JS</span>
+            <span class="partner-item">REACT THREE FIBER / THREE.JS</span>
+            <span class="partner-item">TAILWIND CSS</span>
+            <span class="partner-item">HTML / CSS / JAVASCRIPT</span>
+          </div>
+          <div class="partners-carousel-row" aria-hidden="true">
+            <span class="partner-item">CANVA</span>
+            <span class="partner-item">GIT</span>
+            <span class="partner-item">GITHUB</span>
+            <span class="partner-item">NEXT.JS</span>
+            <span class="partner-item">REACT THREE FIBER / THREE.JS</span>
+            <span class="partner-item">TAILWIND CSS</span>
+            <span class="partner-item">HTML / CSS / JAVASCRIPT</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="projects" class="section">
-      <div class="content-wrapper">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="card-body">
-              <h3>Project Title</h3>
-              <p>Short description of the project, tools used, and key achievements.</p>
-              <div class="tags">
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
+    <!-- =====================================================================
+         FOLD 3: PROJECTS TRANSITION FOLD + FULL-BLEED SHOWCASE SLIDER
+         ===================================================================== -->
+    <div id="projects" anchor-name="Our Projects" class="panel showcase-transition-fold">
+      <div class="base-grid">
+        <div class="section-heading-block showcase">
+          <h2 class="slider-heading medium showcase-pullout-block"><strong>Featured Projects</strong></h2>
+        </div>
+      </div>
+    </div>
+
+    <section class="showcase-slider" aria-label="Featured Projects Showcase">
+      <div class="panel contraint--landscape-ratio showcase-panel" id="project-slider-root" tabindex="0">
+
+        <!-- Large Left/Right Hit-Area Arrows -->
+        <button type="button" class="slider-large-hit-area--left alternate" id="project-prev" aria-label="Previous project">
+          <span class="slider-arrow left">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+          </span>
+        </button>
+        <button type="button" class="slider-large-hit-area--right alternate" id="project-next" aria-label="Next project">
+          <span class="slider-arrow right">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </span>
+        </button>
+
+        <!-- Full-Bleed Slides Track -->
+        <div class="slider-panel-plane projects-slider">
+          <div class="slider-panels-3d-plane" id="project-deck">
+
+            <!-- Project Slide 1 -->
+            <article class="_3d-pane project-pane theme-kontexto active" data-index="0">
+              <img src="images/kontexto-showcase.jpg" alt="KonTEXTO 3D cel-shaded Likha High campus environment in Unity" class="pane-bg-photo" decoding="async">
+              <div class="slider-fader left-weighted"></div>
+              <div class="showcase-landing-title">
+                <div class="base-grid slider-projects-content">
+                  <div class="showcase-landing-title-block">
+                    <div class="preamble centered projects-preamble">PROJECT 01 &bull; 3D EDUCATIONAL GAME (CAPSTONE THESIS)</div>
+                    <h3 class="base-heading section-heading project-slider-heading">KonTEXTO</h3>
+                    <p class="project-slide-summary">
+                      <strong>Role: Art Director &amp; Lead Texture Artist</strong> &mdash; Directed visual worldbuilding and stylized cel-shaded texturing across both characters and modular classroom environments for a 3D educational game set in a Filipino public high school (Likha High) teaching document formatting&mdash;handling asset integration, collision bounds, and custom real-time lighting in Unity.
+                    </p>
+                    <div class="project-slide-tags">
+                      <span>Blender</span><span>Unity Engine</span><span>Photoshop</span><span>Art Direction</span><span>Lead Texture Artist</span>
+                    </div>
+                    <div class="project-slide-actions">
+                      <a href="projects/kontexto.html" class="btn link-button add-spacer">
+                        <span>Explore</span>
+                      </a>
+                      <a href="https://kirubiisfyne.itch.io/kontexto" target="_blank" rel="noopener noreferrer" class="btn link-button add-spacer">
+                        <span>Play on itch.io &#x2197;</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="card-links">
-                <a href="#" target="_blank" rel="noopener noreferrer">Live Demo &rarr;</a>
-                <a href="#" target="_blank" rel="noopener noreferrer">Source Code &rarr;</a>
+            </article>
+
+            <!-- Project Slide 2 -->
+            <article class="_3d-pane project-pane theme-anii" data-index="1">
+              <img src="images/anii-showcase.jpg" alt="Anii! Grow To Know stylized cozy farming game in Unity" class="pane-bg-photo" decoding="async">
+              <div class="slider-fader left-weighted"></div>
+              <div class="showcase-landing-title">
+                <div class="base-grid slider-projects-content">
+                  <div class="showcase-landing-title-block">
+                    <div class="preamble centered projects-preamble">PROJECT 02 &bull; INTERACTIVE FARMING &amp; EDUCATIONAL GAME (HACKATHON BUILD)</div>
+                    <h3 class="base-heading section-heading project-slider-heading">Anii! Grow To Know</h3>
+                    <p class="project-slide-summary">
+                      <strong>Role: Art Director &amp; Project Hustler</strong> &mdash; Led visual direction, environment/prop aesthetics, and startup pitch/product strategy as the team&rsquo;s Art Director and Hustler during a rapid hackathon sprint&mdash;shaping the cozy agricultural theme, scoping an executable MVP.
+                    </p>
+                    <div class="project-slide-tags">
+                      <span>Blender</span><span>Unity Engine</span><span>Adobe Photoshop</span><span>Procreate</span><span>Art Direction</span>
+                    </div>
+                    <div class="project-slide-actions">
+                      <a href="projects/anii-grow-to-know.html" class="btn link-button add-spacer">
+                        <span>Explore</span>
+                      </a>
+                      <a href="https://kirubiisfyne.itch.io/anii-grow-to-know" target="_blank" rel="noopener noreferrer" class="btn link-button add-spacer">
+                        <span>Play on itch.io &#x2197;</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project Slide 3 -->
+            <article class="_3d-pane project-pane theme-see" data-index="2">
+              <div class="pane-visual-stage pane-cover-stage" aria-hidden="true">
+                <div class="stage-glow see-sunset-glow"></div>
+                <div class="cover-jewel-frame">
+                  <img src="images/see-cover.jpg" alt="See. PS1 jewel-case game cover art">
+                </div>
+              </div>
+              <div class="slider-fader left-weighted"></div>
+              <div class="showcase-landing-title">
+                <div class="base-grid slider-projects-content">
+                  <div class="showcase-landing-title-block">
+                    <div class="preamble centered projects-preamble">PROJECT 03 &bull; RETRO-3D PSYCHOLOGICAL GAME (FINAL PROJECT)</div>
+                    <h3 class="base-heading section-heading project-slider-heading">See.</h3>
+                    <p class="project-slide-summary">
+                      <strong>Role: 3D Artist, Character &amp; Environment Texturing</strong> &mdash; Co-developed a PS1-inspired psychological narrative game (Group See / Ukiyo) following protagonist Hiromi across surreal transitioning spaces between a fisheries college campus and a hospital ward&mdash;designing and texturing low-poly character variants (College Girl Hiromi &amp; Hospital Patient Hiromi), modular architectural hallways, and atmospheric lighting scenes in Blender.
+                    </p>
+                    <div class="project-slide-tags">
+                      <span>Blender</span><span>GIMP</span><span>Allegorithmic Substance Painter</span><span>Character &amp; Env Texturing</span>
+                    </div>
+                    <div class="project-slide-actions">
+                      <a href="projects/see.html" class="btn link-button add-spacer">
+                        <span>Explore</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project Slide 4 -->
+            <article class="_3d-pane project-pane theme-imara" data-index="3">
+              <img src="images/imara-showcase.jpg" alt="IMARA atmospheric concept art overlooking a flooded post-deluge skyline" class="pane-bg-photo imara-bg-photo" decoding="async">
+              <div class="slider-fader left-weighted"></div>
+              <div class="showcase-landing-title">
+                <div class="base-grid slider-projects-content">
+                  <div class="showcase-landing-title-block">
+                    <div class="preamble centered projects-preamble">PROJECT 04 &bull; ATMOSPHERIC SCI-FI ADVENTURE (IN DEVELOPMENT)</div>
+                    <h3 class="base-heading section-heading project-slider-heading">IMARA</h3>
+                    <p class="project-slide-summary">
+                      <strong>Role: Creator, Visual Developer &amp; 3D Environment Artist</strong> &mdash; Developing an atmospheric post-deluge sci-fi adventure set in a submerged futuristic Philippine archipelago&mdash;spanning flooded vertical stilt slums (Ang Taas) and the lantern-lit canals of a sunken Binondo district. Leading end-to-end visual worldbuilding, modular architectural kit planning, hero companion drone (Datu) concepting, and real-time Lumen lighting in Unreal Engine 5.
+                    </p>
+                    <div class="project-slide-tags">
+                      <span>Unreal Engine 5</span><span>Blender</span><span>Adobe Photoshop</span><span>Lumen Lighting</span><span>Active Solo Vertical Slice</span>
+                    </div>
+                    <div class="project-slide-actions">
+                      <a href="projects/imara.html" class="btn link-button add-spacer">
+                        <span>Explore</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Bottom Horizontal Tab Bar (.panel-selection.showcase) -->
+        <div class="panel-selection showcase">
+          <div class="panel-selection-container showcase-tabs" id="projects-selection" role="tablist" aria-label="Select featured project">
+            <button type="button" class="expertise-selection-item tab-item active" role="tab" aria-selected="true" data-slide="0">KonTEXTO</button>
+            <button type="button" class="expertise-selection-item tab-item" role="tab" aria-selected="false" data-slide="1">Anii! Grow To Know</button>
+            <button type="button" class="expertise-selection-item tab-item" role="tab" aria-selected="false" data-slide="2">See.</button>
+            <button type="button" class="expertise-selection-item tab-item" role="tab" aria-selected="false" data-slide="3">IMARA</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         FOLD 4: SERVICES TRANSITION FOLD + FULL-BLEED EXPERTISE SLIDER
+         ===================================================================== -->
+    <div id="services" anchor-name="Our Services" class="panel services-transition-fold">
+      <div class="base-grid">
+        <div class="section-heading-block services">
+          <h2 class="slider-heading medium services-pullout-block"><strong>Services &amp; Capabilities</strong></h2>
+        </div>
+      </div>
+    </div>
+
+    <section class="panel landscape-panel expertise-panel" id="services-slider-root" aria-label="Services and Capabilities" tabindex="0">
+
+      <!-- Large Left/Right Hit-Area Arrows -->
+      <button type="button" class="slider-large-hit-area--left alternate" id="service-prev" aria-label="Previous capability">
+        <span class="slider-arrow left">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        </span>
+      </button>
+      <button type="button" class="slider-large-hit-area--right alternate" id="service-next" aria-label="Next capability">
+        <span class="slider-arrow right">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </span>
+      </button>
+
+      <div class="slider-panel-plane alternate">
+        <div class="slider-panels-3d-plane expertise" id="service-deck">
+
+          <!-- Service Slide 1 -->
+          <article class="_3d-pane expertise-pane active" data-index="0">
+            <img src="images/service-concept-art.jpg" alt="" class="expertise-bg-photo" aria-hidden="true" loading="lazy">
+            <div class="slider-fader left-weighted"></div>
+            <div class="expertise-title-block">
+              <div class="base-grid slider-content-grid added-bottom-space">
+                <div class="expertise-landing-title-block">
+                  <div class="preamble faded preamble-left-aligned services">01 // Visual Development</div>
+                  <h3 class="base-heading section-heading medium-alt">Concept Art</h3>
+                  <p class="expertise-summary">
+                    Translating art direction into evocative mood pieces, environment key art, color studies, and visual development concepts for games and atmospheric worlds.
+                  </p>
+                  <ul class="expertise-listing">
+                    <li class="expertise-item">Environment &amp; Mood Key Art</li>
+                    <li class="expertise-item">Color &amp; Lighting Studies</li>
+                    <li class="expertise-item">Visual Development</li>
+                    <li class="expertise-item">Prop &amp; Companion Concepting</li>
+                    <li class="expertise-item">Photoshop &amp; Procreate</li>
+                  </ul>
+                  <div class="project-slide-actions">
+                    <a href="services.html#concept-art" class="btn link-button add-spacer button-aligned-left">
+                      <span>Explore</span>
+                    </a>
+                    <a href="https://www.artstation.com/gnocchi_gerochi6" target="_blank" rel="noopener noreferrer" class="btn link-button add-spacer button-aligned-left">
+                      <span>ArtStation &#x2197;</span>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </article>
+
+          <!-- Service Slide 2 -->
+          <article class="_3d-pane expertise-pane" data-index="1">
+            <img src="images/service-environment.jpg" alt="" class="expertise-bg-photo" aria-hidden="true" loading="lazy">
+            <div class="slider-fader left-weighted"></div>
+            <div class="expertise-title-block">
+              <div class="base-grid slider-content-grid added-bottom-space">
+                <div class="expertise-landing-title-block">
+                  <div class="preamble faded preamble-left-aligned services">02 // Worldbuilding &amp; Real-Time</div>
+                  <h3 class="base-heading section-heading medium-alt">Environment</h3>
+                  <p class="expertise-summary">
+                    Designing modular 3D architectural kits, atmospheric worlds, and real-time lighting setups built across Blender, Unity Engine, and Unreal Engine 5.
+                  </p>
+                  <ul class="expertise-listing">
+                    <li class="expertise-item">Modular Environment Kits</li>
+                    <li class="expertise-item">Worldbuilding &amp; Set Dressing</li>
+                    <li class="expertise-item">Blender &amp; UE5 Lumen</li>
+                    <li class="expertise-item">Unity Real-Time Lighting</li>
+                    <li class="expertise-item">Collision &amp; Asset Integration</li>
+                  </ul>
+                  <a href="services.html#environment" class="btn link-button add-spacer button-aligned-left">
+                    <span>Explore</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service Slide 3 -->
+          <article class="_3d-pane expertise-pane" data-index="2">
+            <img src="images/service-characters-2.jpg" alt="" class="expertise-bg-photo" aria-hidden="true" loading="lazy">
+            <div class="slider-fader left-weighted"></div>
+            <div class="expertise-title-block">
+              <div class="base-grid slider-content-grid added-bottom-space">
+                <div class="expertise-landing-title-block">
+                  <div class="preamble faded preamble-left-aligned services">03 // Low-Poly &amp; Stylized</div>
+                  <h3 class="base-heading section-heading medium-alt">Characters</h3>
+                  <p class="expertise-summary">
+                    Crafting expressive low-poly and stylized 3D character models with cohesive silhouette language and hand-painted or cel-shaded texture passes.
+                  </p>
+                  <ul class="expertise-listing">
+                    <li class="expertise-item">Low-Poly &amp; Stylized Modeling</li>
+                    <li class="expertise-item">Character Texturing</li>
+                    <li class="expertise-item">Variant &amp; Wardrobe Sets</li>
+                    <li class="expertise-item">Cel-Shaded &amp; Retro-3D Passes</li>
+                    <li class="expertise-item">Blender &amp; Substance Painter</li>
+                  </ul>
+                  <a href="services.html#characters" class="btn link-button add-spacer button-aligned-left">
+                    <span>Explore</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service Slide 4 -->
+          <article class="_3d-pane expertise-pane" data-index="3">
+            <img src="images/service-props.jpg" alt="" class="expertise-bg-photo" aria-hidden="true" loading="lazy">
+            <div class="slider-fader left-weighted"></div>
+            <div class="expertise-title-block">
+              <div class="base-grid slider-content-grid added-bottom-space">
+                <div class="expertise-landing-title-block">
+                  <div class="preamble faded preamble-left-aligned services">04 // PBR &amp; Stylized Assets</div>
+                  <h3 class="base-heading section-heading medium-alt">Props</h3>
+                  <p class="expertise-summary">
+                    Building story-driven hero and dressing props with clean topology, UV mapping, and PBR or stylized material storytelling tailored to the world aesthetic.
+                  </p>
+                  <ul class="expertise-listing">
+                    <li class="expertise-item">3D Prop Modeling</li>
+                    <li class="expertise-item">PBR &amp; Stylized Texturing</li>
+                    <li class="expertise-item">UV Layout &amp; Surface Detail</li>
+                    <li class="expertise-item">Environment Dressing Assets</li>
+                    <li class="expertise-item">GIMP, Photoshop &amp; Substance Painter</li>
+                  </ul>
+                  <a href="services.html#props" class="btn link-button add-spacer button-aligned-left">
+                    <span>Explore</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- Bottom Horizontal Tab Bar (.panel-selection.expertise) -->
+      <div class="panel-selection expertise">
+        <div class="panel-selection-container expertise-selection-wrapper" id="services-selection" role="tablist" aria-label="Select capability">
+          <button type="button" class="expertise-selection-item tab-item active" role="tab" aria-selected="true" data-slide="0">Concept Art</button>
+          <button type="button" class="expertise-selection-item tab-item" role="tab" aria-selected="false" data-slide="1">Environment</button>
+          <button type="button" class="expertise-selection-item tab-item" role="tab" aria-selected="false" data-slide="2">Characters</button>
+          <button type="button" class="expertise-selection-item tab-item" role="tab" aria-selected="false" data-slide="3">Props</button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- =====================================================================
+         FOLD 5: COLLABORATION & DIRECT INQUIRY (.panel.about-editorial)
+         ===================================================================== -->
+    <section id="contact" anchor-name="Direct Inquiry" class="panel landscape-panel careers contact-split-panel">
+      <div class="careers-backdrop" aria-hidden="true"></div>
+      <div class="about-shell">
+        <div class="about-grid contact-split-grid">
+          <!-- Left: Collaboration Callout -->
+          <div class="section-heading-block careers-content">
+            <div class="preamble home">COLLABORATION // REMOTE WORLDWIDE</div>
+            <h2 class="base-heading section-heading careers-heading">Atmospheric Worlds,<br>Built Together.</h2>
+            <p class="careers-subtext">
+              Available for 3D environment &amp; texture artistry, visual development, and art direction collaborations across game engines and interactive web spaces.
+            </p>
+            <div class="case-cta-row">
+              <a href="about.html" class="btn link-button careers-button">
+                <span>Who I am</span>
+              </a>
+              <a href="services.html" class="btn link-button careers-button">
+                <span>Services</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Direct Inquiry Card -->
+          <div class="about-contact-col">
+            <div class="contact-card">
+              <div class="preamble">DIRECT INQUIRY</div>
+              <h3 class="base-heading contact-card-title">Let&rsquo;s Connect</h3>
+              <p class="contact-card-text">
+                Open to 3D environment &amp; texture roles, visual development commissions, and collaborative game or interactive web projects.
+              </p>
+
+              <div class="contact-email-box">
+                <span class="email-label">PRIMARY EMAIL</span>
+                <a href="mailto:livieph@gmail.com" class="email-link">livieph@gmail.com</a>
+              </div>
+
+              <div class="contact-meta-list">
+                <div class="meta-row">
+                  <span class="meta-key">BASE</span>
+                  <span class="meta-val">Philippines (UTC+8) &bull; Remote Worldwide</span>
+                </div>
+                <div class="meta-row">
+                  <span class="meta-key">FOCUS</span>
+                  <span class="meta-val">3D, Visual Dev &amp; Art Direction</span>
+                </div>
+                <div class="meta-row">
+                  <span class="meta-key">AVAILABILITY</span>
+                  <span class="meta-val highlight-green">Open for Collaborations</span>
+                </div>
+              </div>
+
+              <a href="mailto:livieph@gmail.com" class="btn link-button contact-send-btn">
+                <span>Send Message</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section">
-      <div class="content-wrapper">
-        <h2>Contact</h2>
-        <p>Interested in working together or have any questions? Reach out below.</p>
-        <a href="mailto:olivia@example.com" class="btn btn-primary">Send Email</a>
-      </div>
+    <!-- =====================================================================
+         FOLD 6: SIGNATURE PAGE FLOW SECTION (.page-flow--section)
+         ===================================================================== -->
+    <section class="page-flow--section" aria-label="Continue navigation">
+      <a href="services.html" class="page-flow--element page-flow-prev">
+        <div class="page-flow--label-container">
+          <div class="page-flow--label">PREVIOUS</div>
+          <div class="page-flow--next-line"></div>
+        </div>
+        <div class="page-flow-title-row">
+          <svg class="page-flow--arrow arrow-left" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="page-flow--title">Services &amp; Capabilities</span>
+        </div>
+      </a>
+
+      <a href="about.html" class="page-flow--element page-flow-next">
+        <div class="page-flow--label-container">
+          <div class="page-flow--label">NEXT</div>
+          <div class="page-flow--next-line"></div>
+        </div>
+        <div class="page-flow-title-row">
+          <span class="page-flow--title">Who I Am</span>
+          <svg class="page-flow--arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
     </section>
   </main>
 
-  <footer>
-    <div class="content-wrapper">
-      <p>&copy; <span id="current-year"></span> Olivia Gale. All rights reserved.</p>
+  <!-- =======================================================================
+       STUDIO FOOTER (.footer)
+       ======================================================================= -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="base-grid new-footer-links">
+        <div class="footer--link-section">
+          <ul class="footer--link-group">
+            <li class="footer--link-item"><a href="#hero" class="footer--link">Home</a></li>
+            <li class="footer--link-item"><a href="about.html" class="footer--link">About Me</a></li>
+            <li class="footer--link-item"><a href="#services" class="footer--link">Services</a></li>
+            <li class="footer--link-item"><a href="#projects" class="footer--link">Projects</a></li>
+            <li class="footer--link-item"><a href="#contact" class="footer--link">Collaboration</a></li>
+            <li class="footer--link-item"><a href="#contact" class="footer--link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer--socmed-group">
+          <a href="https://github.com/owleaveyah" target="_blank" rel="noopener noreferrer" class="footer--socmed-link">GitHub</a>
+          <a href="https://www.linkedin.com/in/olivia-gale-gerochi-4aab9029a/" target="_blank" rel="noopener noreferrer" class="footer--socmed-link">LinkedIn</a>
+          <a href="https://www.instagram.com/livie.gale/" target="_blank" rel="noopener noreferrer" class="footer--socmed-link">Instagram</a>
+          <a href="https://www.artstation.com/gnocchi_gerochi6" target="_blank" rel="noopener noreferrer" class="footer--socmed-link">ArtStation</a>
+        </div>
+
+        <div class="footer-bottom-details">
+          <span class="footer-logo-wordmark">OLIVIA GALE</span>
+          <p class="footer-paragraph">
+            <strong class="address-bold">Philippines &bull; Remote Worldwide</strong><br>
+            3D, Visual Development &amp; Art Direction
+          </p>
+        </div>
+
+        <div class="copywrite-text">
+          Copyright &copy; <span id="current-year"></span> Olivia Gale. All Rights Reserved.<br>
+          Built with vanilla HTML, CSS, and JavaScript.
+        </div>
+      </div>
     </div>
   </footer>
+
+  <!-- Case Study Detail Modal (triggered by project EXPLORE buttons) -->
+  <div id="project-modal" class="project-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-dialog">
+      <button type="button" class="modal-close" id="modal-close" aria-label="Close project details">&times;</button>
+      <div class="preamble" id="modal-slug">PROJECT // CASE STUDY</div>
+      <h3 class="base-heading modal-title" id="modal-title">Project Title</h3>
+      <p class="modal-description" id="modal-description"></p>
+      <div class="modal-highlights" id="modal-highlights"></div>
+      <div class="project-slide-tags" id="modal-tags"></div>
+      <div class="modal-actions">
+        <a href="#contact" class="btn link-button" id="modal-inquire"><span>Inquire About Similar Work</span></a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn link-button" id="modal-demo"><span>Live Demo &#x2197;</span></a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn link-button" id="modal-code"><span>Source Code &#x2197;</span></a>
+      </div>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
