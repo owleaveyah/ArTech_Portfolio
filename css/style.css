@@ -2899,7 +2899,8 @@ button {
   margin-left: auto;
 }
 
-.characters-pair-grid {
+.characters-pair-grid,
+.environment-pair-grid {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
   gap: 1.5rem;
@@ -2924,6 +2925,7 @@ button {
 @media screen and (max-width: 640px) {
   .service-band-list,
   .characters-pair-grid,
+  .environment-pair-grid,
   .about-pillars-grid {
     grid-template-columns: 1fr;
   }
